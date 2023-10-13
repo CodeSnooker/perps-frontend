@@ -7966,7 +7966,7 @@ flatted@^3.2.7:
   resolved "https://registry.yarnpkg.com/flatted/-/flatted-3.2.7.tgz#609f39207cb614b89d0765b477cb2d437fbf9787"
   integrity sha512-5nqDSxl8nn5BSNxyR3n4I6eDmbolI6WT+QqR547RwxQapgjQBmtktdP+HTBb/a/zLsbzERTONyUB5pefh5TtjQ==
 
-follow-redirects@^1.0.0, follow-redirects@^1.14.0, follow-redirects@^1.14.9, follow-redirects@^1.15.0:
+follow-redirects@^1.0.0, follow-redirects@^1.14.9, follow-redirects@^1.15.0:
   version "1.15.2"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.15.2.tgz#b460864144ba63f2681096f274c4e57026da2c13"
   integrity sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==
@@ -12133,10 +12133,25 @@ react-scripts@5.0.1:
   optionalDependencies:
     fsevents "^2.3.2"
 
-react-select@^5.2.1, react-select@^5.7.3:
+react-select@^5.2.1:
   version "5.7.4"
   resolved "https://registry.yarnpkg.com/react-select/-/react-select-5.7.4.tgz#d8cad96e7bc9d6c8e2709bdda8f4363c5dd7ea7d"
   integrity sha512-NhuE56X+p9QDFh4BgeygHFIvJJszO1i1KSkg/JPcIJrbovyRtI+GuOEa4XzFCEpZRAEoEI8u/cAHK+jG/PgUzQ==
+  dependencies:
+    "@babel/runtime" "^7.12.0"
+    "@emotion/cache" "^11.4.0"
+    "@emotion/react" "^11.8.1"
+    "@floating-ui/dom" "^1.0.1"
+    "@types/react-transition-group" "^4.4.0"
+    memoize-one "^6.0.0"
+    prop-types "^15.6.0"
+    react-transition-group "^4.3.0"
+    use-isomorphic-layout-effect "^1.1.2"
+
+react-select@^5.7.3:
+  version "5.7.5"
+  resolved "https://registry.yarnpkg.com/react-select/-/react-select-5.7.5.tgz#d2d0f29994e0f06000147bfb2adf58324926c2fd"
+  integrity sha512-jgYZa2xgKP0DVn5GZk7tZwbRx7kaVz1VqU41S8z1KWmshRDhlrpKS0w80aS1RaK5bVIXpttgSou7XCjWw1ncKA==
   dependencies:
     "@babel/runtime" "^7.12.0"
     "@emotion/cache" "^11.4.0"
@@ -12550,10 +12565,10 @@ ripemd160@^2.0.0, ripemd160@^2.0.1:
     hash-base "^3.0.0"
     inherits "^2.0.1"
 
-rm-react-components@^1.0.21:
-  version "1.0.21"
-  resolved "https://registry.yarnpkg.com/rm-react-components/-/rm-react-components-1.0.21.tgz#c252c737d5cde80d5dd536a77c2b7837791d5de7"
-  integrity sha512-eBLmZ5czbS7/wJaGic3PtGfpTaSYGViXOftyXGDvuTkOx2WLDJHAVRCyLMOB6p5FBgfVA7eboQX6jB0YIsWgMA==
+rm-react-components@^1.0.22:
+  version "1.0.22"
+  resolved "https://registry.yarnpkg.com/rm-react-components/-/rm-react-components-1.0.22.tgz#cb81560f72217583958b22a061afe79fc1973edb"
+  integrity sha512-VBaD10Qv8wyCWEP0XcMQFhb8/nVNuTCAQiq0JF6N6YRNOhF9LtmrdnfEyoDMovy6qkUh+zTdyD8F4vUYyctBSA==
   dependencies:
     "@ethersproject/providers" "^5.7.2"
     bignumber.js "^9.1.1"
@@ -12564,9 +12579,9 @@ rm-react-components@^1.0.21:
     styled-components "^5.3.10"
 
 rm-sdk@^1.0.0:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/rm-sdk/-/rm-sdk-1.0.10.tgz#4b6897c9874d23a08efe5c60538cdf27526d62f0"
-  integrity sha512-/fLCUTrouiTqe8kMlhUw6InjSoc2N49+Zsby8Js+eRfGoskhvYyLs7xB8tXXutJ2BYll5uhMXjFX29Qos+uaEw==
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/rm-sdk/-/rm-sdk-1.0.12.tgz#a36e51d0951f0a99179f749176713987718d3a64"
+  integrity sha512-f3w/1bPAeSpap+REEylZodEe7B5QsLo+d56Ue37q6vQoITDXBhulX8SsellV8eOhzgWlPsWxNDNsrvGDaYVk+g==
   dependencies:
     axios "^0.21.1"
     bignumber.js "^9.0.1"
