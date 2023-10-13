@@ -1057,6 +1057,7 @@ export default function QlpSwap(props) {
             address={account}
             subscriptionType="emailAndTelegram"
             waitlistName="QuickSwapWaitlist"
+            addressRequired={true}
             title="Insured deposits: Sign-up for the QuickSwap Perp Insurance Waitlist"
             successText="Congratulations! You have been added to the QuickSwap Perp Insurance waiting list."
             option1="Smart contract hack risk and Oracle attack - 3%/year"
