@@ -11,7 +11,6 @@ const WEB3_ONBOARD_DAPP_ID = "2a56b719-c7ea-4a64-bbf1-98569383edd3";
 
 const DEFAULT_CHAIN_ID = 1101;
 
-
 export default function useInitWeb3Onboard() {
   const [web3Onboard, setWeb3Onboard] = useState(null);
 
@@ -70,11 +69,7 @@ export default function useInitWeb3Onboard() {
     connect: {
       autoConnectAllPreviousWallet: true,
     },
-    wallets: [
-      walletConnect,
-      injected,
-      trust,
-    ],
+    wallets: [walletConnect, injected, trust],
     chains: [
       {
         id: "0x44d",
@@ -87,7 +82,7 @@ export default function useInitWeb3Onboard() {
     appMetadata: {
       name: "Quickswap Perps",
       icon: qperpIcon,
-      description: "Decentralized spot & perpetual exchange",
+      description: "Decentralised spot & perpetual exchange",
       recommendedInjectedWallets: [
         { name: "MetaMask", url: "https://metamask.io" },
         { name: "WalletConnect", url: "https://walletconnect.com" },
