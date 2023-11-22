@@ -3,6 +3,8 @@ import qperpIcon from "../img/quickperp.svg";
 import { init } from "@web3-onboard/react";
 import injectedModule, { ProviderLabel } from "@web3-onboard/injected-wallets";
 import walletConnectModule from "@web3-onboard/walletconnect";
+import bitgetWalletModule from "@web3-onboard/bitget";
+
 import trustModule from "@web3-onboard/trust";
 import { useEffect, useState } from "react";
 
@@ -19,7 +21,7 @@ export default function useInitWeb3Onboard() {
       ProviderLabel.MetaMask,
       ProviderLabel.Trust,
       ProviderLabel.OKXWallet,
-      ProviderLabel.BitKeep,
+      ProviderLabel.Bitget,
       ProviderLabel.DeFiWallet,
     ],
     custom: [],
@@ -30,19 +32,19 @@ export default function useInitWeb3Onboard() {
       const metaMask = wallets.find(({ label }) => label === ProviderLabel.MetaMask);
       const okxWallet = wallets.find(({ label }) => label === ProviderLabel.OKXWallet);
       const trustWallet = wallets.find(({ label }) => label === ProviderLabel.Trust);
-      const bitkeepWallet = wallets.find(({ label }) => label === ProviderLabel.BitKeep);
+      const bitgetWallet = wallets.find(({ label }) => label === ProviderLabel.Bitget);
 
       return (
         [
           metaMask,
           okxWallet,
-          bitkeepWallet,
+          bitgetWallet,
           trustWallet,
           ...wallets.filter(
             ({ label }) =>
               label !== ProviderLabel.MetaMask &&
               label !== ProviderLabel.OKXWallet &&
-              label !== ProviderLabel.BitKeep &&
+              label !== ProviderLabel.Bitget &&
               label !== ProviderLabel.Trust
           ),
         ]
@@ -53,23 +55,24 @@ export default function useInitWeb3Onboard() {
   });
 
   const walletConnect = walletConnectModule({
-    connectFirstChainId: true,
+    //connectFirstChainId: true,
     version: 2,
     handleUri: (uri) => console.log(uri),
     projectId: WALLET_CONNECT_PROJECT_ID,
     requiredChains: [DEFAULT_CHAIN_ID],
-    qrcodeModalOptions: {
-      mobileLinks: ["rainbow", "metamask", "argent", "trust", "imtoken", "pillar", "okxwallet"],
-    },
+    // qrcodeModalOptions: {
+    //   mobileLinks: ["rainbow", "metamask", "argent", "trust", "imtoken", "pillar", "okxwallet"],
+    // },
   });
 
   const trust = trustModule();
+  const bitget = bitgetWalletModule();
 
   const initWeb3Onboard = init({
     connect: {
       autoConnectAllPreviousWallet: true,
     },
-    wallets: [walletConnect, injected, trust],
+    wallets: [walletConnect, injected, trust, bitget],
     chains: [
       {
         id: "0x44d",
