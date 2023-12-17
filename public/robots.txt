@@ -1,3 +1,5 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Disallow: /?ref=woolres.com
+Disallow: /charting_library/en-tv-chart.e2a841ff.html
 Disallow:
