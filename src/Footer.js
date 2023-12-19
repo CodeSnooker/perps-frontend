@@ -111,7 +111,7 @@ export default function Footer() {
         © 2023 QuickSwap
       </a>
       <div style={{ float: "right" }}>
-        <a href="https://quickswap.exchange/#/swap" target="_blank">
+        <a href="https://docs.google.com/document/d/1Gglh43oxUZHdgrS2L9lZfsI4f6HYNF6MbBDsDPJVFkM/edit" target="_blank">
           Terms of Use
         </a>
         {lastSubgraphBlock && lastBlock && (
